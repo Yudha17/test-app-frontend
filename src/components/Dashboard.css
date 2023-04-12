@@ -1,0 +1,2277 @@
+.maindashboard-content {
+    background-color: #e1e3eb;
+    height: 936px;
+}
+
+.maindashboard-1content {
+    background-color: #e1e3eb;
+    height: 728px;
+}
+
+.maindashboard-2content {
+    background-color: #e1e3eb;
+    height: 728px;
+}
+
+.maindashboard-3content {
+    background-color: #e1e3eb;
+    height: 728px;
+}
+
+.maindashboard-4content {
+    background-color: #e1e3eb;
+    height: 742px;
+}
+
+.maindashboard-5content {
+    background-color: #e1e3eb;
+    height: 812px;
+}
+
+.headerdashboard {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 35px;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #ccae62;
+}
+
+.titledashboard1{
+    position: absolute;
+    top: 0;
+    left: 23px;
+    color: #2c2c54;
+    font-weight: lighter;
+}
+
+.titledashboard2{
+    position: absolute;
+    top: -10px;
+    left: 135px;
+    color: #2c2c54;
+    font-weight: bolder;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+.subheader1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fullname1{
+    position: relative;
+    direction: rtl;
+    top: 16px;
+    right: 25px;
+    color: floralwhite;
+    font-size: 20px;
+}
+
+.logoutbutton{
+    position: relative;
+    direction: rtl;
+    top: 26px;
+    right: 44px;
+    background-color: darkred;
+    color: #fff;
+    width: 62px;
+    height: 31px;
+    border-radius: 4px;
+    border: 2px solid darkred
+}
+
+.logoutbutton:hover{
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.filtercontainer{
+    height: 85px;
+    width: 100%;
+    margin-top: -12px;
+    background-color:darksalmon;
+}
+
+.jobdescription{
+    padding-top: 10px;
+    margin-left: 15px;
+    justify-content: flex-start;
+    text-align: left;
+    color: #2c2c54;
+    font-weight: lighter;
+    font-size: large;
+}
+
+.jobicon{
+
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 117px;
+    left: 33px;
+    opacity: 60%;
+    z-index: 9;
+}
+
+.jobdinput{
+    position: absolute;
+    top: 109px;
+    left: 23px;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding-left: 40px;
+    background-color: #48dbfb;
+    color: darkred;
+    font-weight: bolder;
+}
+
+
+.location{
+    margin-top: -33px;
+    margin-left: 556px;
+    justify-content: flex-start;
+    text-align: left;
+    color: #2c2c54;
+    font-weight: lighter;
+    font-size: large;
+}
+
+.locationinput{
+    position: absolute;
+    top: 109px;
+    left: 565px;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding-left: 40px;
+    background-color: #48dbfb;
+    color: darkred;
+    font-weight: bolder;
+}
+
+.locationicon{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 117px;
+    left: 575px;
+    opacity: 60%;
+    z-index: 9;
+}
+
+.checkbox1{
+    position: relative;
+    top: -55px;
+    left: 1080px;
+    -webkit-appearance: none;
+    appearance: none;
+
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid darkred;
+    border-radius: 4px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.checkbox1:hover{
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.checkbox1:checked{
+    background-color: darkred;
+}
+
+.checkbox1:checked::after{
+    content: "\2714";
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    right: 2px;
+    top: -3px;
+}
+
+.labelcheckbox1{
+    margin-top: -82px;
+    margin-left: 1139px;
+    justify-content: flex-start;
+    text-align: left;
+    color: #2c2c54;
+    font-weight: lighter;
+    font-size: large;
+}
+
+.searchfilterbutton{
+    position: absolute;
+    top: 100px;
+    left: 32px;
+    margin-left: 1346px;
+    width: 62px;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    border:2px solid darkred;
+}
+
+.searchfilterbutton:hover{
+    border-color: #ccc;
+    color: #ccc;
+}
+
+
+
+.jobtable-content{
+    position: absolute;
+    top:174px;
+    left: 22px;
+    width: 97%;
+    height: 651px;
+    border: 5px solid darkred;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+
+.jobtable-1content{
+    position: absolute;
+    top:174px;
+    left: 22px;
+    width: 97%;
+    height: 224px;
+    border: 5px solid darkred;
+    padding-top: 5px;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+
+.jobtable-2content{
+    position: absolute;
+    top:174px;
+    left: 22px;
+    width: 97%;
+    height: 304px;
+    border: 5px solid darkred;
+    padding-top: 5px;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+
+.jobtable-3content{
+    position: absolute;
+    top:174px;
+    left: 22px;
+    width: 97%;
+    height: 384px;
+    border: 5px solid darkred;
+    padding-top: 5px;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+
+.jobtable-4content{
+    position: absolute;
+    top:174px;
+    left: 22px;
+    width: 97%;
+    height: 464px;
+    border: 5px solid darkred;
+    padding-top: 5px;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+
+.jobtable-5content{
+    position: absolute;
+    top:174px;
+    left: 22px;
+    width: 97%;
+    height: 544px;
+    border: 5px solid darkred;
+    padding-top: 5px;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+
+
+
+.jobtableheader{
+    position: absolute;
+    top: 14px; /*26*/
+    left: 20px; /*21*/
+    width: 25%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #2c2c54;
+}
+
+
+
+.jobtableline1{
+    position: absolute;
+    top: 62px;
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline2{
+    position: absolute;
+    top: 62px;
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline3{
+    position: absolute;
+    top: 62px; 
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline4{
+    position: absolute;
+    top: 62px;
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtablename1{
+    position: absolute;
+    top: 79px;
+    left: 18px;
+    width: 100%;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename2{
+    position: absolute;
+    top: 79px;
+    left: 18px;
+    width: 25%;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation{
+    position: absolute;
+    top: 80px;
+    right: 18px;
+    width: 25%;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation2{
+    position: absolute;
+    text-align: right;
+    top: 80px;
+    right: 18px;
+    width: 25%;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+.jobtablecompanyname1{
+    position: absolute;
+    display: flex;
+    top: 105px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtimestatus1{
+    position: relative;
+    top: -15px;
+    width: auto;
+    color: floralwhite;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname2{
+    position: relative;
+    width: 25%;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated1{
+    position: absolute;
+    top: 274px;
+    right: 18px;
+    width: 25%;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated2{
+    position: absolute;
+    top: 101px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+
+.jobtableline5{
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline6{
+    position: absolute;
+    top: 140px;
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline7{
+    position: absolute;
+    top: 140px; 
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline8{
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtablename3-content{
+    position: absolute;
+    top: 157px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename3-none{
+    display: none;
+}
+
+.jobtablename4-content{
+    position: absolute;
+    top: 157px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename4-none{
+    display: none;
+}
+
+.jobtablelocation3-content{
+    position: absolute;
+    top: 159px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation3-none{
+    display: none;
+}
+
+.jobtablelocation4-content{
+    position: absolute;
+    text-align: right;
+    top: 159px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation4-none{
+    display: none;
+}
+
+.jobtablecompanyname3-content{
+    position: absolute;
+    display: flex;
+    top: 182px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname3-none{
+    display: none;
+}
+
+.jobtimestatus2-content{
+    position: relative;
+    top: -14px;
+    width: auto;
+    color: floralwhite;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtimestatus2-none{
+    display: none;
+}
+
+.jobtablecompanyname4-content{
+    position: absolute;
+    top: 182px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname4-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated3-content{
+    position: absolute;
+    top: 180px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated3-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated4-content{
+    position: absolute;
+    top: 180px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated4-none{
+    display: none;
+}
+
+
+
+.jobtableline9-content{
+    position: absolute;
+    top: 216px; 
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline9-none{
+    display: none;
+}
+
+.jobtableline10-content{
+    position: absolute;
+    top: 216px; 
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline10-none{
+    display: none;
+}
+
+.jobtableline11-content{
+    position: absolute;
+    top: 216px; 
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline11-none{
+    display: none;
+}
+
+.jobtableline12-content{
+    position: absolute;
+    top: 216px; 
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline12-none{
+    display: none;
+}
+
+.jobtablename5-content{
+    position: absolute;
+    top: 233px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename5-none{
+    display: none;
+}
+
+.jobtablename6-content{
+    position: absolute;
+    top: 233px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename6-none{
+    display: none;
+}
+
+.jobtablelocation5-content{
+    position: absolute;
+    top: 213px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation5-none{
+    display: none;
+}
+
+.jobtablelocation6-content{
+    position: absolute;
+    text-align: right;
+    top: 235px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation6-none{
+    display: none;
+}
+
+.jobtablecompanyname5-content{
+    position: absolute;
+    display: flex;
+    top: 259px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname5-none{
+    display: none;
+}
+
+.jobtimestatus3-content{
+    position: relative;
+    top: -14px;
+    width: auto;
+    color: floralwhite;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtimestatus3-none{
+    display: none;
+}
+
+.jobtablecompanyname6-content{
+    position: absolute;
+    top: 259px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname6-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated5-content{
+    position: absolute;
+    top: 256px;
+    right: 18px;
+    width: 25%;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated5-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated6-content{
+    position: absolute;
+    top: 256px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated6-none{
+    display: none;
+}
+
+
+
+.jobtableline13-content{
+    position: absolute;
+    top: 294px; 
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline13-none{
+    display: none;
+}
+
+.jobtableline14-content{
+    position: absolute;
+    top: 294px; 
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline14-none{
+    display: none;
+}
+
+.jobtableline15-content{
+    position: absolute;
+    top: 294px; 
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline15-none{
+    display: none;
+}
+
+.jobtableline16-content{
+    position: absolute;
+    top: 294px; 
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline16-none{
+    display: none;
+}
+
+.jobtablename7-content{
+    position: absolute;
+    top: 311px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename7-none{
+    display: none;
+
+}
+
+.jobtablename8-content{
+    position: absolute;
+    top: 311px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename8-none{
+    display: none;
+
+}
+
+.jobtablelocation7-content{
+    position: absolute;
+    top: 312px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation7-none{
+    position: absolute;
+    top: 493px;
+    right: 39px;
+    width: 0px;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.jobtablelocation8-content{
+    position: absolute;
+    text-align: right;
+    top: 312px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation8-none{
+    display: none;
+}
+
+.jobtablecompanyname7-content{
+    position: absolute;
+    display: flex;
+    top: 337px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname7-none{
+    display: none;
+}
+
+.jobtimestatus4-content{
+    position: relative;
+    top: -14px;
+    margin-left: 5px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtimestatus4-none{
+   display: none;
+}
+
+.jobtablecompanyname8-content{
+    position: absolute;
+    top: 337px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname8-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated7-content{
+    position: absolute;
+    top: 333px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated7-none{
+  display: none;
+}
+
+.jobtablepostingtimecreated8-content{
+    position: absolute;
+    top: 333px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated8-none{
+   display: none;
+}
+
+
+
+.jobtableline17-content{
+    position: absolute;
+    top: 372px; 
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline17-none{
+    display: none;
+}
+
+.jobtableline18-content{
+    position: absolute;
+    top: 372px; 
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline18-none{
+   display: none;
+}
+
+.jobtableline19-content{
+    position: absolute;
+    top: 372px; 
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline19-none{
+   display: none;
+}
+
+.jobtableline20-content{
+    position: absolute;
+    top: 372px; 
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline20-none{
+    display: none;
+}
+
+.jobtablename9-content{
+    position: absolute;
+    top: 389px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename9-none{
+    display: none;
+}
+
+.jobtablename10-content{
+    position: absolute;
+    top: 389px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename10-none{
+    display: none;
+}
+
+.jobtablelocation9-content{
+    position: absolute;
+    top: 390px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation9-none{
+    display: none;
+}
+
+.jobtablelocation10-content{
+    position: absolute;
+    text-align: right;
+    top: 390px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation10-none{
+    display: none;
+}
+
+.jobtablecompanyname9-content{
+    position: absolute;
+    display: flex;
+    top: 414px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname9-none{
+  display: none;
+}
+
+.jobtimestatus5-content{
+    position: relative;
+    top: -15px;
+    margin-left: 5px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtimestatus5-none{
+    display: none;
+}
+
+.jobtablecompanyname10-content{
+    position: absolute;
+    top: 414px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname10-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated9-content{
+    position: absolute;
+    top: 411px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated9-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated10-content{
+    position: absolute;
+    top: 411px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated10-none{
+    display: none;
+}
+
+
+
+.jobtableline21-content{
+    position: absolute;
+    top: 448px; 
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline21-none{
+    display: none;
+}
+
+.jobtableline22-content{
+    position: absolute;
+    top: 448px; 
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline22-none{
+    display: none;
+}
+
+.jobtableline23-content{
+    position: absolute;
+    top: 448px;
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline23-none{
+    display: none;
+}
+
+.jobtableline24-content{
+    position: absolute;
+    top: 448px; 
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline24-none{
+    display: none;
+}
+
+.listbetween1-content{
+    position: absolute;
+    text-align: center;
+    top: 452px;
+    left: 18px;
+    width: 97.1%;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.listbetween1-none{
+    display: none;
+}
+
+
+.jobtableline25-content{
+    position: absolute;
+    top: 492px; 
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline25-none{
+    display: none;
+}
+
+.jobtableline26-content{
+    position: absolute;
+    top: 492px; 
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline26-none{
+    display: none;
+}
+
+.jobtableline27-content{
+    position: absolute;
+    top: 492px;
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline27-none{
+    display: none;
+}
+
+.jobtableline28-content{
+    position: absolute;
+    top: 492px; 
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline28-none{
+    display: none;
+}
+
+.jobtablename11-content{
+    position: absolute;
+    top: 509px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename11-none{
+    display: none;
+}
+
+.jobtablename12-content{
+    position: absolute;
+    top: 509px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablename12-none{
+    display: none;
+}
+
+.jobtablelocation11-content{
+    position: absolute;
+    top: 511px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation11-none{
+    display: none;
+}
+
+.jobtablelocation12-content{
+    position: absolute;
+    text-align: right;
+    top: 511px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.jobtablelocation12-none{
+    display: none;
+}
+
+.jobtablecompanyname11-content{
+    position: absolute;
+    display: flex;
+    top: 534px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname11-none{
+    display: none;
+}
+
+.jobtimestatus6-content{
+    position: relative;
+    top: -15px;
+    margin-left: 5px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtimestatus6-none{
+    display: none;
+}
+
+.jobtablecompanyname12-content{
+    position: absolute;
+    top: 534px;
+    left: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablecompanyname12-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated11-content{
+    position: absolute;
+    top: 532px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated11-none{
+    display: none;
+}
+
+.jobtablepostingtimecreated12-content{
+    position: absolute;
+    top: 532px;
+    right: 18px;
+    width: auto;
+    color: floralwhite;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+.jobtablepostingtimecreated12-none{
+    display: none;
+}
+
+
+
+.jobtableline29-content{
+    position: absolute;
+    top: 568px; 
+    left: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline29-none{
+    display: none;
+}
+
+.jobtableline30-content{
+    position: absolute;
+    top: 568px; 
+    left: 363px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline30-none{
+    display: none;
+}
+
+.jobtableline31-content{
+    position: absolute;
+    top: 568px;
+    left: 705px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline31-none{
+    display: none;
+}
+
+.jobtableline32-content{
+    position: absolute;
+    top: 568px; 
+    right: 20px;
+    width: 25%;
+    color: floralwhite;
+    border-top: 2px solid darkred;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.jobtableline32-none{
+    display: none;
+}
+
+.loadmorebutton1-content{
+    position: absolute;
+    top: 769px;
+    left: 46px;
+    width: 93.7%;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid darkred;
+}
+
+.loadmorebutton1-content:hover{
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.loadmorebutton1-1content{
+    position: absolute;
+    top: 338px;
+    left: 46px;
+    width: 93.7%;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: not-allowed;
+    border: 2px solid darkred;
+    opacity: 50%;
+}
+
+.loadmorebutton1-1content:hover{
+    border-color: darkred;
+    color: #fff;
+}
+
+.loadmorebutton1-2content{
+    position: absolute;
+    top: 418px;
+    left: 46px;
+    width: 93.7%;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: not-allowed;
+    border: 2px solid darkred;
+    opacity: 50%;
+}
+
+.loadmorebutton1-2content:hover{
+    border-color: darkred;
+    color: #fff;
+}
+
+.loadmorebutton1-3content{
+    position: absolute;
+    top: 498px;
+    left: 46px;
+    width: 93.7%;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: not-allowed;
+    border: 2px solid darkred;
+    opacity: 50%;
+}
+
+.loadmorebutton1-3content:hover{
+    border-color: darkred;
+    color: #fff;
+}
+
+.loadmorebutton1-4content{
+    position: absolute;
+    top: 578px;
+    left: 46px;
+    width: 93.7%;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: not-allowed;
+    border: 2px solid darkred;
+    opacity: 50%;
+}
+
+.loadmorebutton1-4content:hover{
+    border-color: darkred;
+    color: #fff;
+}
+
+.loadmorebutton1-5content{
+    position: absolute;
+    top: 658px;
+    left: 46px;
+    width: 93.7%;
+    height: 31px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: not-allowed;
+    border: 2px solid darkred;
+    opacity: 50%;
+}
+
+.loadmorebutton1-5content:hover{
+    border-color: darkred;
+    color: #fff;
+}
+
+.pagecontainer-content{
+    position: absolute;
+    top: 845px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 50px;
+    border: 2px solid darkred ;
+}
+
+.pagecontainer-1content{
+    position: absolute;
+    top: 418px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 50px;
+    border: 2px solid darkred ;
+}
+
+.pagecontainer-2content{
+    position: absolute;
+    top: 498px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 50px;
+    border: 2px solid darkred ;
+}
+
+.pagecontainer-3content{
+    position: absolute;
+    top: 578px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 50px;
+    border: 2px solid darkred ;
+}
+
+.pagecontainer-4content{
+    position: absolute;
+    top: 658px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 50px;
+    border: 2px solid darkred ;
+}
+
+.pagecontainer-5content{
+    position: absolute;
+    top: 738px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 50px;
+    border: 2px solid darkred ;
+}
+
+.pagecontainerindividualdoubleprev-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+.pagecontainerindividualdoubleprev-stuck{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: not-allowed;
+    opacity: 50%;
+}
+
+.right2narrow1left{
+    width: 15px;
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+.right2narrow1fullleft{
+    display: none;
+    width: 15px;
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+.pagecontainerindividualdoubleprev-basic:hover .right2narrow1left{
+    display: none;
+}
+
+.pagecontainerindividualdoubleprev-basic:hover .right2narrow1fullleft{
+    display: block;
+}
+
+.pagecontainerindividualonceprev-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+.pagecontainerindividualonceprev-stuck{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+.right1narrow1left{
+    width: 10px;
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+.right1narrow1fullleft{
+    display: none;
+    width: 10px;
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+.pagecontainerindividualonceprev-basic:hover .right1narrow1left{
+    display: none;
+}
+
+.pagecontainerindividualonceprev-basic:hover .right1narrow1fullleft{
+    display: block;
+}
+
+.pagecontainerindividualpage1-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+}
+
+.pagecontainerindividualpage1-selected{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.pagecontainerindividualpage2-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+}
+
+.pagecontainerindividualpage2-selected{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.pagecontainerindividualpage3-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+}
+
+.pagecontainerindividualpage3-selected{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.pagecontainerindividualpage4-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+    
+}
+
+.pagecontainerindividualpage4-selected{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    color: floralwhite;
+    cursor: not-allowed;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.pagecontainerindividualoncenext-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: pointer;
+    
+}
+
+.pagecontainerindividualoncenext-stuck{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: not-allowed;
+    opacity: 50%;
+}
+
+.right1narrow1right{
+    width: 10px;
+    height: 15px;
+    
+}
+
+.right1narrow1fullright{
+    display: none;
+    width: 10px;
+    height: 15px;
+}
+
+.pagecontainerindividualoncenext-basic:hover .right1narrow1right{
+    display: none;
+}
+
+.pagecontainerindividualoncenext-basic:hover .right1narrow1fullright{
+    display: block;
+}
+
+.pagecontainerindividualdoublenext-basic{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+.pagecontainerindividualdoublenext-stuck{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    background-color: darkred;
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+.right2narrow1right{
+    width: 15px;
+    height: 15px;
+}
+
+.right2narrow1fullright{
+    display: none;
+    width: 15px;
+    height: 15px;
+}
+
+.pagecontainerindividualdoublenext-basic:hover .right2narrow1right{
+    display: none;
+}
+
+.pagecontainerindividualdoublenext-basic:hover .right2narrow1fullright{
+    display: block;
+}
+
+.pagecontainerindividualdatarecord-content{
+    position: absolute;
+    top:904px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    color: darkred;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.pagecontainerindividualdatarecord-1content{
+    position: absolute;
+    top:477px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    color: darkred;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.pagecontainerindividualdatarecord-2content{
+    position: absolute;
+    top:557px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    color: darkred;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.pagecontainerindividualdatarecord-3content{
+    position: absolute;
+    top:637px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    color: darkred;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.pagecontainerindividualdatarecord-4content{
+    position: absolute;
+    top:717px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    color: darkred;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.pagecontainerindividualdatarecord-5content{
+    position: absolute;
+    top:797px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    color: darkred;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.containerpopup{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 20px;
+    width: 400px;
+    height: 177px;
+    background-color: #ccae62;
+    border: 5px solid whitesmoke;
+    z-index: 99999999999;
+   
+}
+
+.titlecontainerpopup{
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99999999999;
+    color: #2c2c54;
+}
+
+.containerpopuptitleline{
+    position: absolute;
+    top: 53px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+    height: 2px;
+    background-color: white;
+    z-index: 99999999999;
+}
+
+.suggestioncontainerpopup{
+    position: absolute;
+    top: 56px;
+    left: 20px;
+    color: #2c2c54;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    z-index: 99999999999;
+}
+
+.okcontainerpopupbutton{
+    position: absolute;
+    top: 127px;
+    right: 20px;
+    width: 100px;
+    height: 30px;
+    border: 2px solid darkred;
+    color: #fff;
+    background-color: darkred;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 99999999999;
+}
+
+.okcontainerpopupbutton:hover{
+    border-color: #ccc;
+    color: #ccc;
+}

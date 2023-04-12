@@ -1,0 +1,261 @@
+.maindashboard2 {
+    background-color: #e1e3eb;
+    height: 1836px;
+}
+
+.headerdashboard2 {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 35px;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #ccae62;
+}
+
+.titledashboard3{
+    position: absolute;
+    top: 0;
+    left: 23px;
+    color: #2c2c54;
+    font-weight: lighter;
+}
+
+.titledashboard4{
+    position: absolute;
+    top: -10px;
+    left: 135px;
+    color: #2c2c54;
+    font-weight: bolder;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+.subheader2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fullname2{
+    position: relative;
+    direction: rtl;
+    top: 16px;
+    right: 25px;
+    color: floralwhite;
+    font-size: 20px;
+}
+
+.logout2button{
+    position: relative;
+    direction: rtl;
+    top: 26px;
+    right: 44px;
+    background-color: darkred;
+    color: #fff;
+    width: 62px;
+    height: 31px;
+    border-radius: 4px;
+    border: 2px solid darkred;
+    cursor: pointer;
+}
+
+.logout2button:hover{
+    border-color: #ccc;
+    color: #ccc;
+    
+}
+
+.detailcontainer1{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:93px;
+    left: 0;
+    right: 0;
+    width: 97%;
+    height: 1651px;
+    border: 5px solid darkred;
+    background-color: #ffb8b8;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top1content{
+    position:absolute;
+    top: 9px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid darkred;
+    width: 98.5%;
+    height: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.timestatusdetail1{
+    position: absolute;
+    display: flex;
+    top: -2px;
+    left: 0;
+    color: floralwhite;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.locationdetail1{
+    position: relative;
+    top: -10px;
+    left: 5px;
+    color: floralwhite;
+    font-size: 15px;
+}
+
+.jobdetail1{
+    position: absolute;
+    top: -7px;
+    left: -2px;
+    width: auto;
+    color: floralwhite;
+    font-size: 45px;
+}
+
+.second1content{
+    position:absolute;
+    top: 119px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98.5%;
+    height: 1500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flagcontainer1{
+    position: absolute;
+    top: 0;
+    left: 1039px;
+    width: 350px;
+    height: 227px;
+    border: 5px solid darkred;
+    border-radius: 5px;
+}
+
+.flagcontainerline1{
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    border: 1px solid darkred;
+    width: 349px;
+}
+
+.flagcontainerotherjob1{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    top: 6px;
+    right: 10px;
+    border: 1px solid darkred;
+    width: 100px;
+    height: 30px;
+    background-color: darkred;
+    border-radius: 5px;
+}
+
+.titleotherjob1{
+    position: absolute;
+    color: floralwhite;
+}
+
+.flagcontainercompanyname{
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    width: auto;
+    font-weight: bold;
+}
+
+.flagcontainericon1{
+    position: absolute;
+    top: 50px;
+    left: 3px;
+    border: 1px solid darkred;
+    width: 342px;
+    height: 140px;
+}
+
+.url1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 338px;
+    height: 144px;
+}
+
+.flagcontainerwebsitelink1{
+    position: absolute;
+    top: 184px;
+    left: 3px;
+    width: auto;
+    text-decoration: underline;
+}
+
+.applycontainer1{
+    position: absolute;
+    top: 257px;
+    left: 1039px;
+    width: 350px;
+    height: 166px;
+    border: 5px solid darkred;
+    border-radius: 5px;
+    background-color: #fad390;
+}
+
+.applycontainerline1{
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    border: 1px solid darkred;
+    width: 349px;
+    
+}
+
+.applycontainercompanyname{
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    width: auto;
+    font-weight: bold;
+}
+
+.applycontaineremailaddress1{
+    position: absolute;
+    top: 49px;
+    left: 10px;
+    width: auto;
+}
+
+.applycontaineremailaddress2{
+    position: absolute;
+    top: 95px;
+    left: 10px;
+    width: auto;
+}
+
+.applycontainerwebsitelink1{
+    position: absolute;
+    top: 129px;
+    left: 10px;
+    width: auto;
+}
+
+a {
+   color: floralwhite; 
+}
