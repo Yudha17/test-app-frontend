@@ -17,13 +17,9 @@ function Dashboard (){
 
     const [arrayJson, setArrayJson] = useState([])
     const [arrayJsonFilter, setArrayJsonFilter] = useState([])
+    const [arrayJsonFilter2, setArrayJsonFilter2] = useState([])
     const [name, setName] = useState('')
-    const [company1, setCompany1] = useState([])
-    const [company2, setCompany2] = useState([])
-    const [company3, setCompany3] = useState([])
-    const [company4, setCompany4] = useState([])
-    const [company5, setCompany5] = useState([])
-
+    
     let [recordData1, setRecordData1] = useState('1')
     let [recordData2, setRecordData2] = useState('2')
     let [recordData3, setRecordData3] = useState('3')
@@ -57,41 +53,41 @@ function Dashboard (){
     let jobtableContent5Dynamic = `jobtable-${pos5Table? 'content' : '5content'}`
 
      // element from JSON state
-    let [jobNameRow1, setJobNameRow1] = useState('')
-    let [companyNameRow1, setCompanyNameRow1] = useState('')
-    let [locationRow1, setLocationRow1] = useState('')
-    let [timeStatusRow1, setTimeStatusRow1] = useState('')
-    let [dateAndTimeConvertRow1, setDateAndTimeConvertRow1] = useState('')
+    const [jobNameRow1, setJobNameRow1] = useState('')
+    const [companyNameRow1, setCompanyNameRow1] = useState('')
+    const [locationRow1, setLocationRow1] = useState('')
+    const [timeStatusRow1, setTimeStatusRow1] = useState('')
+    const [dateAndTimeConvertRow1, setDateAndTimeConvertRow1] = useState('')
 
-    let [jobNameRow2, setJobNameRow2] = useState('')
-    let [companyNameRow2, setCompanyNameRow2] = useState('')
-    let [locationRow2, setLocationRow2] = useState('')
-    let [timeStatusRow2, setTimeStatusRow2] = useState('')
-    let [dateAndTimeConvertRow2, setDateAndTimeConvertRow2] = useState('')
+    const [jobNameRow2, setJobNameRow2] = useState('')
+    const [companyNameRow2, setCompanyNameRow2] = useState('')
+    const [locationRow2, setLocationRow2] = useState('')
+    const [timeStatusRow2, setTimeStatusRow2] = useState('')
+    const [dateAndTimeConvertRow2, setDateAndTimeConvertRow2] = useState('')
+    
+    const [jobNameRow3, setJobNameRow3] = useState('')
+    const [companyNameRow3, setCompanyNameRow3] = useState('')
+    const [locationRow3, setLocationRow3] = useState('')
+    const [timeStatusRow3, setTimeStatusRow3] = useState('')
+    const [dateAndTimeConvertRow3, setDateAndTimeConvertRow3] = useState('')
 
-    let [jobNameRow3, setJobNameRow3] = useState('')
-    let [companyNameRow3, setCompanyNameRow3] = useState('')
-    let [locationRow3, setLocationRow3] = useState('')
-    let [timeStatusRow3, setTimeStatusRow3] = useState('')
-    let [dateAndTimeConvertRow3, setDateAndTimeConvertRow3] = useState('')
+    const [jobNameRow4, setJobNameRow4] = useState('')
+    const [companyNameRow4, setCompanyNameRow4] = useState('')
+    const [locationRow4, setLocationRow4] = useState('')
+    const [timeStatusRow4, setTimeStatusRow4] = useState('')
+    const [dateAndTimeConvertRow4, setDateAndTimeConvertRow4] = useState('')
+    
+    const [jobNameRow5, setJobNameRow5] = useState('')
+    const [companyNameRow5, setCompanyNameRow5] = useState('')
+    const [locationRow5, setLocationRow5] = useState('')
+    const [timeStatusRow5, setTimeStatusRow5] = useState('')
+    const [dateAndTimeConvertRow5, setDateAndTimeConvertRow5] = useState('')
 
-    let [jobNameRow4, setJobNameRow4] = useState('')
-    let [companyNameRow4, setCompanyNameRow4] = useState('')
-    let [locationRow4, setLocationRow4] = useState('')
-    let [timeStatusRow4, setTimeStatusRow4] = useState('')
-    let [dateAndTimeConvertRow4, setDateAndTimeConvertRow4] = useState('')
-
-    let [jobNameRow5, setJobNameRow5] = useState('')
-    let [companyNameRow5, setCompanyNameRow5] = useState('')
-    let [locationRow5, setLocationRow5] = useState('')
-    let [timeStatusRow5, setTimeStatusRow5] = useState('')
-    let [dateAndTimeConvertRow5, setDateAndTimeConvertRow5] = useState('')
-
-    let [jobNameRow6, setJobNameRow6] = useState('')
-    let [companyNameRow6, setCompanyNameRow6] = useState('')
-    let [locationRow6, setLocationRow6] = useState('')
-    let [timeStatusRow6, setTimeStatusRow6] = useState('')
-    let [dateAndTimeConvertRow6, setDateAndTimeConvertRow6] = useState('')
+    const [jobNameRow6, setJobNameRow6] = useState('')
+    const [companyNameRow6, setCompanyNameRow6] = useState('')
+    const [locationRow6, setLocationRow6] = useState('')
+    const [timeStatusRow6, setTimeStatusRow6] = useState('')
+    const [dateAndTimeConvertRow6, setDateAndTimeConvertRow6] = useState('')
 
 
      // element appear state
@@ -369,7 +365,7 @@ function Dashboard (){
     let dynamicPage4 = `pagecontainerindividualpage4-${page4Status? 'basic':'selected'}`
 
     const [modal, setModal] = useState(false)
-   
+    const [warningAttention, setWarningAttention] = useState('')
 
     const [searchState, setSearchState] = useState('')
 
@@ -486,7 +482,7 @@ function Dashboard (){
                         convertPage1Start()  
                     }
 
-                    //console.log(response1.data)
+                
                     
                    
                 })
@@ -696,7 +692,7 @@ function Dashboard (){
  
     
     const button1 = () => {
-        //console.log(arrayJson)
+        
 
         setRecordData1(recordData1 == '1')
         setRecordData2(recordData2 == '2')
@@ -757,7 +753,6 @@ function Dashboard (){
 
         convertPage1()
 
-        //console.log(company5)
  
     }
 
@@ -972,6 +967,8 @@ function Dashboard (){
                 button2()
                 buttonPage5.className = 'pagecontainerindividualonceprev-basic'
                 buttonPage8.className = 'pagecontainerindividualdoubleprev-basic'
+
+                
             }
             
                 
@@ -989,7 +986,7 @@ function Dashboard (){
             } 
 
 
-       } catch (error) {
+       } catch  {
         
        }
 
@@ -998,12 +995,12 @@ function Dashboard (){
 
                 if(jobNameRow5 == arrayJsonFilter[4].title && companyNameRow5 == arrayJsonFilter[4].company){
 
-                    console.log('masuk1')
+                    
                     showFilterJob1c()
 
                         if(buttonPage1 && buttonPage2 && buttonPage6 && buttonPage7 && !buttonPage5 && !buttonPage8){
 
-                            console.log('masuk5')
+                            
                             buttonPage2.className = 'pagecontainerindividualpage2-selected'
 
                             buttonPage1.style.width = "30px"
@@ -1027,7 +1024,7 @@ function Dashboard (){
 
                         if(buttonPage1 && buttonPage2 && buttonPage6 && buttonPage7 && buttonPage5 && buttonPage8){
 
-                            console.log('masuk4')
+                            
                             buttonPage2.className = 'pagecontainerindividualpage2-selected'
 
                             buttonPage1.style.width = "30px"
@@ -1052,7 +1049,7 @@ function Dashboard (){
                         //scenario 1a 
                         if(buttonPage1b && buttonPage2 && buttonPage6 && buttonPage7 && !buttonPage5 && !buttonPage8){
 
-                            console.log('masuk2')
+                           
                             buttonPage2.className = 'pagecontainerindividualpage2-selected'
                             buttonPage1b.className = 'pagecontainerindividualpage1-basic'
                             buttonPage6.className = 'pagecontainerindividualoncenext-stuck'
@@ -1072,7 +1069,7 @@ function Dashboard (){
                         //scenario 1c
                         if(buttonPage1b && buttonPage2 && buttonPage5 && buttonPage8){
 
-                            console.log('masuk3')
+                           
                             buttonPage2.className = 'pagecontainerindividualpage2-selected'
                             buttonPage1b.className = 'pagecontainerindividualpage1-basic'
                             buttonPage1b.style.width = "30px"
@@ -1102,7 +1099,7 @@ function Dashboard (){
                 }
 
 
-       } catch (error) {
+       } catch  {
         
        }
             
@@ -1154,13 +1151,13 @@ function Dashboard (){
             
             if(jobNameRow1 == arrayJsonFilter[5].title && companyNameRow1 == arrayJsonFilter[5].company){
             
-                console.log('masukkkk1')
+                
                 showFilterJob6b()
                 loadmorebutton.style.display = "block"
     
                 //scenario 1b 
                 if(buttonPage2b && buttonPage1 && buttonPage5 && buttonPage7){
-                    console.log('masukkkk2')
+                    
                     buttonPage5.style.visibility = "visible"
                     buttonPage7.style.visibility = "visible"
                     
@@ -1187,8 +1184,8 @@ function Dashboard (){
 
             }
 
-        } catch (error) {
-            //console.log(error)
+        } catch  {
+            //
         }
     
         
@@ -1238,19 +1235,19 @@ function Dashboard (){
                 }
         
             
-        } catch (error) {
+        } catch  {
             
         }
         
 
         try {
             if(jobNameRow5 == arrayJsonFilter[4].title && companyNameRow5 == arrayJsonFilter[4].company){
-                console.log('masuk1')
+                
                 showFilterJob1c()
 
                 if(buttonPage1 && buttonPage2 && buttonPage6 && buttonPage7 && !buttonPage5 && !buttonPage8){
 
-                    console.log('masuk5')
+                   
                     buttonPage2.className = 'pagecontainerindividualpage2-selected'
 
                     buttonPage1.style.width = "30px"
@@ -1274,7 +1271,7 @@ function Dashboard (){
 
                 if(buttonPage1 && buttonPage2 && buttonPage6 && buttonPage7 && buttonPage5 && buttonPage8){
 
-                    console.log('masuk2')
+                    
                     buttonPage2.className = 'pagecontainerindividualpage2-selected'
 
                     buttonPage1.style.width = "30px"
@@ -1299,7 +1296,7 @@ function Dashboard (){
                 //scenario 1a 
                 if(buttonPage1b && buttonPage2 && buttonPage6 && buttonPage7 && !buttonPage5 && !buttonPage8){
 
-                    console.log('masuk2')
+                   
                     buttonPage2.className = 'pagecontainerindividualpage2-selected'
                     buttonPage1b.className = 'pagecontainerindividualpage1-basic'
                     buttonPage6.className = 'pagecontainerindividualdoublenext-stuck'
@@ -1319,7 +1316,7 @@ function Dashboard (){
                 //scenario 1c
                 if(buttonPage1b && buttonPage2 && buttonPage5 && buttonPage8){
 
-                    console.log('masuk3')
+                    
                     buttonPage2.className = 'pagecontainerindividualpage2-selected'
                     buttonPage1b.className = 'pagecontainerindividualpage1-basic'
                     buttonPage1b.style.width = "30px"
@@ -1345,8 +1342,8 @@ function Dashboard (){
                 }
 
             }
-        } catch (error) {
-            //console.log(error)
+        } catch  {
+            //
         }
         
 
@@ -1402,14 +1399,13 @@ function Dashboard (){
 
         try {
             if(jobNameRow1 == arrayJsonFilter[5].title && companyNameRow1 == arrayJsonFilter[5].company){
-            //fix this
-                console.log('masukkkk1')
+            
                 showFilterJob6b()
                 loadmorebutton.style.display = "block"
     
                 //scenario 1b 
                 if(buttonPage2b && buttonPage1 && buttonPage5 && buttonPage6){
-                    console.log('masukkkk2')
+                   
                     buttonPage5.style.visibility = "visible"
                     buttonPage6.style.visibility = "visible"
                     
@@ -1436,8 +1432,8 @@ function Dashboard (){
             }
             
 
-        } catch (error) {
-            //console.log(error)
+        } catch  {
+            
         }
         
 
@@ -1449,13 +1445,23 @@ function Dashboard (){
         // appear how many json title
         setSearchState(e.target.value)
 
-        //console.log(arrayJson)
+        
 
         let seeCriteria = arrayJson.filter((param) => {
            return searchState.toLowerCase() === '' ? param : param.title.toLowerCase().includes(searchState)
         })
         setArrayJsonFilter(seeCriteria)
-        console.log(arrayJsonFilter)
+        
+
+            if(arrayJsonFilter2.length >= 1){
+
+                let seeCriteria3 = arrayJsonFilter2.filter((param) => {
+                    return searchState.toLowerCase() === '' ? param : param.title.toLowerCase().includes(searchState)
+                })
+                setArrayJsonFilter(seeCriteria3)
+              
+
+            }
         
     }
 
@@ -1464,225 +1470,851 @@ function Dashboard (){
         // appear how many json location
         setSearchState(e.target.value)
 
-        //console.log(arrayJson)
+        //(arrayJson)
 
-        let seeCriteria = arrayJson.filter((param) => {
+        let seeCriteria2 = arrayJson.filter((param) => {
            return searchState.toLowerCase() === '' ? param : param.location.toLowerCase().includes(searchState)
         })
-        setArrayJsonFilter(seeCriteria)
-         console.log(arrayJsonFilter)
+        setArrayJsonFilter2(seeCriteria2)
+        
+
+            if(arrayJsonFilter.length >= 1){
+
+                let seeCriteria3 = arrayJsonFilter.filter((param) => {
+                    return searchState.toLowerCase() === '' ? param : param.location.toLowerCase().includes(searchState)
+                 })
+                 setArrayJsonFilter2(seeCriteria3)
+                  
+
+            }
     }
+
+   
 
     const searchFilter = () => {
         const buttonPage1 = document.querySelector('.pagecontainerindividualpage1-selected')
         const buttonPage2 = document.querySelector('.pagecontainerindividualpage2-selected')
         const buttonPage3 = document.querySelector('.pagecontainerindividualpage3-selected')
         const buttonPage4 = document.querySelector('.pagecontainerindividualpage4-selected')
+     
         
         if(buttonPage1){
 
-            console.log('Arraynya : ' + arrayJsonFilter.length)
-            if (arrayJsonFilter.length == 1) {
+           
+            if (arrayJsonFilter.length == 0 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter.length > 6 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 0) {
                 showFilterJob1()
                 buttonNextFilter1()
-
+                
             } 
-            if (arrayJsonFilter.length == 2){
+
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 2) {
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                showFilterJob1()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
+            } 
+
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
                 showFilterJob2()
                 buttonNextFilter1()
+
+            }
+
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 2) {
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                showFilterJob2()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
             } 
-            if (arrayJsonFilter.length == 3) {
+
+            if (arrayJsonFilter.length == 3 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
                 showFilterJob3()
                 buttonNextFilter1()
+
             }
-            if (arrayJsonFilter.length == 4) {
+
+            if (arrayJsonFilter.length == 4 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
                 showFilterJob4()
                 buttonNextFilter1()
-            } 
-            if (arrayJsonFilter.length == 6) {
+
+            }
+
+            if (arrayJsonFilter.length == 6 && arrayJsonFilter2.length == 0) {
+
                 
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
                 showFilterJob6b()
                 buttonNextFilter6a()
 
-                setPos1Table(pos1Table = '1content')
-                setTable1Content(table1Content = 'none')
-                setPos2Table(pos2Table = '2content')
-                setTable2Content(table2Content = 'none')
-                setPos3Table(pos3Table = '3content')
-                setTable3Content(table3Content = 'none')
-
-                console.log(pos2Table)
-                console.log(table2Content)
-
-                if(pos1Table == 'content' && table1Content == 'content'){
-
-                    console.log('masuk buttonpage 1')
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-
-                if(pos1Table == false && table1Content == false){
-
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-
-                if(pos2Table == 'content' && table2Content == 'content'){
- 
-                    console.log('masuk buttonpage 1b')
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-
-                if(pos2Table == false && table2Content == false){
-
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-                
-                if(pos3Table == 'content' && table3Content == 'content'){
- 
-                    console.log('masuk buttonpage 1c')
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-
-                if(pos3Table == false && table3Content == false){
-
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-
-                if(pos4Table == 'content' && table4Content == 'content'){
- 
-                    console.log('masuk buttonpage 1d')
-                    showFilterJob6b()
-                    buttonNextFilter6a()
-                }
-                
-
             }
-            if (arrayJsonFilter.length > 6){
 
-                console.log('masuk!!')
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 3) {
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob1()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
                 toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
             }
-           
+            
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 3) {
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob2()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
+            }
+
+            if (arrayJsonFilter.length == 3 && arrayJsonFilter2.length == 3) {
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob3()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
+            } 
+
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 4) {
+                setPos4Table(pos4Table = 'content')
+                setTable4Content(table4Content = 'content')
+                showFilterJob1()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
+            } 
+
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 4) {
+                setPos4Table(pos4Table = 'content')
+                setTable4Content(table4Content = 'content')
+                showFilterJob2()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
+            } 
+
+            if (arrayJsonFilter.length == 4 && arrayJsonFilter2.length == 4) {
+                setPos4Table(pos4Table = 'content')
+                setTable4Content(table4Content = 'content')
+                showFilterJob4()
+                buttonNextFilter1()
+                arrayJsonFilter2.length = 0
+                
+                toggleModal()
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+ 
+                ///lanjutkan
+            } 
+
+
+
+            if (arrayJsonFilter2.length == 0 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length > 6 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            }
+
+            if (arrayJsonFilter2.length == 1 && arrayJsonFilter.length == 0) {
+                showFilterJob1LocationFilter()
+                buttonNextFilter1()
+                
+ 
+            } 
+
+            if (arrayJsonFilter2.length == 2 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob2LocationFilter()
+                buttonNextFilter1()
+
+            }
+
+            if (arrayJsonFilter2.length == 3 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                showFilterJob3LocationFilter()
+                buttonNextFilter1()
+
+            }
+
+            if (arrayJsonFilter2.length == 4 && arrayJsonFilter.length == 0) {
+
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob4LocationFilter()
+                buttonNextFilter1()
+
+            }
+
+            if (arrayJsonFilter2.length == 5 && arrayJsonFilter.length == 0) {
+
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+
+            }
+
+            if (arrayJsonFilter2.length == 2 && arrayJsonFilter.length == 3) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob2LocationFilter()
+                buttonNextFilter1()
+
+            }
+
+            if (arrayJsonFilter2.length == 1 && arrayJsonFilter.length == 4) {
+
+                setPos4Table(pos4Table = 'content')
+                setTable4Content(table4Content = 'content')
+                showFilterJob1LocationFilter()
+                buttonNextFilter1()
+                arrayJsonFilter.length = 0
+                
+                toggleModal()
+     
+                if(modal == false){
+                  
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+                
+            }
+
+            if (arrayJsonFilter2.length == 1 && arrayJsonFilter.length == 6) {
+
+                setPos5Table(pos5Table = 'content')
+                setTable5Content(table5Content = 'content')
+                showFilterJob1LocationFilter()
+                buttonNextFilter1()
+                arrayJsonFilter.length = 0
+              
+                toggleModal()
+         
+
+                if(modal == false){
+               
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+                
+            }
+
+            if (arrayJsonFilter2.length == 2 && arrayJsonFilter.length == 6) {
+
+                setPos5Table(pos5Table = 'content')
+                setTable5Content(table5Content = 'content')
+                showFilterJob2LocationFilter()
+                buttonNextFilter1()
+                arrayJsonFilter.length = 0
+                
+                toggleModal()
+              
+
+                if(modal == false){
+                    
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+                
+            }
+
+            if (arrayJsonFilter2.length == 3 && arrayJsonFilter.length == 6) {
+
+                setPos5Table(pos5Table = 'content')
+                setTable5Content(table5Content = 'content')
+                showFilterJob3LocationFilter()
+                buttonNextFilter1()
+                arrayJsonFilter.length = 0
+                
+                toggleModal()
+                
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+                
+            }
+
+            if (arrayJsonFilter2.length == 4 && arrayJsonFilter.length == 6) {
+
+                setPos5Table(pos5Table = 'content')
+                setTable5Content(table5Content = 'content')
+                showFilterJob4LocationFilter()
+                buttonNextFilter1()
+                arrayJsonFilter.length = 0
+                
+                toggleModal()
+              
+
+                if(modal == false){
+                   
+                    setWarningAttention('This is last section of Searching. OK button will refresh the page !')
+                }
+                
+            }
+
+   
         } 
         
         if(buttonPage2){
             
-            if(arrayJsonFilter.length == 1) {
+            if (arrayJsonFilter.length == 0 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter.length > 6 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length == 0 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length > 6 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            }
+
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 0) {
                 showFilterJob1()
                 buttonNextFilter2()
+                
+            } 
 
+            if (arrayJsonFilter2.length == 1 && arrayJsonFilter.length == 0) {
+                showFilterJob1LocationFilter()
+                buttonNextFilter2()
+ 
             } 
             
-            if (arrayJsonFilter.length == 2){
-                showFilterJob2()
-                buttonNextFilter2()
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 0) {
+
+                
                 setPos1Table(pos1Table = 'content')
                 setTable1Content(table1Content = 'content')
-            } 
+                showFilterJob2()
+                buttonNextFilter2()
+
+            }
+
+            if (arrayJsonFilter2.length == 2 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob2LocationFilter()
+                buttonNextFilter2()
+
+            }
             
-            if (arrayJsonFilter.length == 3) {
+            if (arrayJsonFilter.length == 3 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
                 showFilterJob3()
                 buttonNextFilter2()
-             
+
             } 
+
+            if (arrayJsonFilter2.length == 3 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                showFilterJob3LocationFilter()
+                buttonNextFilter2()
+
+            }
             
-            if (arrayJsonFilter.length == 4) {
+            if (arrayJsonFilter.length == 4 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
                 showFilterJob4()
                 buttonNextFilter2()
-            } 
-            
-            if (arrayJsonFilter.length == 6) {
-                showFilterJob6b()
-                buttonNextFilter6b()
 
-            } 
-
-            if (arrayJsonFilter.length > 6){
-
-                console.log('masuk!!')
-                toggleModal()
             }
+
+            if (arrayJsonFilter2.length == 4 && arrayJsonFilter.length == 0) {
+
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob4LocationFilter()
+                buttonNextFilter2()
+
+            }
+
+            if (arrayJsonFilter2.length == 5 && arrayJsonFilter.length == 0) {
+
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+
+            }
+            
+            if (arrayJsonFilter.length == 6 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob6b()
+                buttonNextFilter6a()
+
+            }
+
            
         }
 
         if(buttonPage3){
             
-            if(arrayJsonFilter.length == 1) {
+            if (arrayJsonFilter.length == 0 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter.length > 6 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length == 0 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length > 6 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            }
+
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 0) {
                 showFilterJob1()
                 buttonNextFilter3()
-               
+                
+            } 
+
+            if (arrayJsonFilter2.length == 1 && arrayJsonFilter.length == 0) {
+                showFilterJob1LocationFilter()
+                buttonNextFilter3()
+ 
             } 
             
-            if (arrayJsonFilter.length == 2){
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
                 showFilterJob2()
                 buttonNextFilter3()
-            } 
-            
-            if (arrayJsonFilter.length == 3) {
+
+            }
+
+            if (arrayJsonFilter2.length == 2 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob2LocationFilter()
+                buttonNextFilter3()
+
+            }
+
+            if (arrayJsonFilter.length == 3 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
                 showFilterJob3()
                 buttonNextFilter3()
+
             } 
+
+            if (arrayJsonFilter2.length == 3 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                showFilterJob3LocationFilter()
+                buttonNextFilter3()
+
+            }
             
-            if (arrayJsonFilter.length == 4) {
+            if (arrayJsonFilter.length == 4 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
                 showFilterJob4()
                 buttonNextFilter3()
-            } 
-            
-            if (arrayJsonFilter.length == 6) {
-                showFilterJob6b()
-                buttonNextFilter6c()
+
             }
 
-            if (arrayJsonFilter.length > 6){
+            if (arrayJsonFilter2.length == 4 && arrayJsonFilter.length == 0) {
 
-                console.log('masuk!!')
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob4LocationFilter()
+                buttonNextFilter3()
+
+            }
+
+            if (arrayJsonFilter2.length == 5 && arrayJsonFilter.length == 0) {
+
                 toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+
             }
-          
             
+            if (arrayJsonFilter.length == 6 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob6b()
+                buttonNextFilter6a()
+
+            }
+             
         }
  
         if(buttonPage4){
+
+            if (arrayJsonFilter.length == 0 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter.length > 6 && arrayJsonFilter2.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length == 0 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            } 
+
+            if (arrayJsonFilter2.length > 6 && arrayJsonFilter.length == 0) {
+                toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+            }
             
-            if(arrayJsonFilter.length == 1) {
+            if (arrayJsonFilter.length == 1 && arrayJsonFilter2.length == 0) {
                 setPos3Table(pos3Table = 'content')
                 setTable3Content(table3Content = 'content')
                 showFilterJob1()
                 buttonNextFilter4()
                 
             } 
+
+            if (arrayJsonFilter2.length == 1 && arrayJsonFilter.length == 0) {
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob1LocationFilter()
+                buttonNextFilter4()
+ 
+            } 
             
-            if (arrayJsonFilter.length == 2){
+            if (arrayJsonFilter.length == 2 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
                 showFilterJob2()
                 buttonNextFilter4()
+
+            }
+
+            if (arrayJsonFilter2.length == 2 && arrayJsonFilter.length == 0) {
+
                 
-            } 
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob2LocationFilter()
+                buttonNextFilter4()
+
+            }
             
-            if (arrayJsonFilter.length == 3) {
+            if (arrayJsonFilter.length == 3 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
                 showFilterJob3()
                 buttonNextFilter4()
+
             } 
+
+            if (arrayJsonFilter2.length == 3 && arrayJsonFilter.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                showFilterJob3LocationFilter()
+                buttonNextFilter4()
+
+            }
             
-            if (arrayJsonFilter.length == 4) {
+            if (arrayJsonFilter.length == 4 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
                 showFilterJob4()
                 buttonNextFilter4()
-            } 
-            
-            if (arrayJsonFilter.length == 6) {
-                showFilterJob6b()
-                buttonNextFilter6d()
-            
-            }
-           
-            if (arrayJsonFilter.length > 6){
 
-                console.log('masuk!!')
+            }
+
+            if (arrayJsonFilter2.length == 4 && arrayJsonFilter.length == 0) {
+
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                setPos2Table(pos2Table = 'content')
+                setTable2Content(table2Content = 'content')
+                setPos3Table(pos3Table = 'content')
+                setTable3Content(table3Content = 'content')
+                showFilterJob4LocationFilter()
+                buttonNextFilter4()
+
+            }
+
+            if (arrayJsonFilter2.length == 5 && arrayJsonFilter.length == 0) {
+
                 toggleModal()
+
+                if(modal == false){
+                    
+                    setWarningAttention('Please use specific word !')
+                }
+
+            }
+            
+            if (arrayJsonFilter.length == 6 && arrayJsonFilter2.length == 0) {
+
+                
+                setPos1Table(pos1Table = 'content')
+                setTable1Content(table1Content = 'content')
+                showFilterJob6b()
+                buttonNextFilter6a()
+
             }
         }
 
@@ -1690,6 +2322,8 @@ function Dashboard (){
         
 
     }
+
+
 
     const showFilterJob1 = () => {
 
@@ -1741,7 +2375,7 @@ function Dashboard (){
         
     }
 
-    const showFilterJob1b = () => {
+    const showFilterJob1LocationFilter = () => {
 
         setRecordData1(recordData1 = '1')
 
@@ -1753,11 +2387,14 @@ function Dashboard (){
         
         setPage2Status(page2Status = 'basic')
 
+        setPage3Status(page3Status = 'basic')
 
-        setJobNameRow1(arrayJsonFilter[5].title)
-        setCompanyNameRow1(arrayJsonFilter[5].company)
-        setLocationRow1(arrayJsonFilter[5].location)
-        setTimeStatusRow1(arrayJsonFilter[5].type)
+        setPage4Status(page4Status = 'basic')
+
+        setJobNameRow1(arrayJsonFilter2[0].title)
+        setCompanyNameRow1(arrayJsonFilter2[0].company)
+        setLocationRow1(arrayJsonFilter2[0].location)
+        setTimeStatusRow1(arrayJsonFilter2[0].type)
 
         setJobNameRow2('')
         setCompanyNameRow2('')
@@ -1784,7 +2421,7 @@ function Dashboard (){
         setLocationRow6('')
         setTimeStatusRow6('')
 
-        convertPageFilter1b()
+        convertPageFilter1LocationFilter()
         
     }
 
@@ -1896,6 +2533,59 @@ function Dashboard (){
         
     }
 
+    const showFilterJob2LocationFilter = () => {
+
+        setRecordData3(recordData3 == '9')
+        setRecordData2(recordData2 = '2')
+
+        setPos3Table(pos3Table = 'content')
+        setPos2Table(pos2Table == '2content')
+
+        setTable3Content(table3Content = 'content')
+        setTable2Content(table2Content == 'none')
+
+        setPage1Status(page1Status = 'selected')
+        
+        setPage2Status(page2Status = 'basic')
+
+        setPage3Status(page3Status = 'basic')
+
+        setPage4Status(page4Status = 'basic')
+
+        setJobNameRow1(arrayJsonFilter2[0].title)
+        setCompanyNameRow1(arrayJsonFilter2[0].company)
+        setLocationRow1(arrayJsonFilter2[0].location)
+        setTimeStatusRow1(arrayJsonFilter2[0].type)
+
+        setJobNameRow2(arrayJsonFilter2[1].title)
+        setCompanyNameRow2(arrayJsonFilter2[1].company)
+        setLocationRow2(arrayJsonFilter2[1].location)
+        setTimeStatusRow2(arrayJsonFilter2[1].type)
+
+        setJobNameRow3('')
+        setCompanyNameRow3('')
+        setLocationRow3('')
+        setTimeStatusRow3('')
+        
+        setJobNameRow4('')
+        setCompanyNameRow4('')
+        setLocationRow4('')
+        setTimeStatusRow4('')
+     
+        setJobNameRow5('')
+        setCompanyNameRow5('')
+        setLocationRow5('')
+        setTimeStatusRow5('')
+     
+        setJobNameRow6('')
+        setCompanyNameRow6('')
+        setLocationRow6('')
+        setTimeStatusRow6('')
+
+        convertPageFilter2LocationFilter()
+        
+    }
+
     const showFilterJob3 = () => {
 
         
@@ -1949,14 +2639,73 @@ function Dashboard (){
         
     }
 
+    const showFilterJob3LocationFilter = () => {
+
+        
+        setRecordData3(recordData3 = '3')
+
+        
+        setPos3Table(pos3Table == '3content')
+
+        
+        setTable3Content(table3Content == 'none')
+
+        setPage1Status(page1Status = 'selected')
+        
+        setPage2Status(page2Status = 'basic')
+
+        setPage3Status(page3Status = 'basic')
+
+        setPage4Status(page4Status = 'basic')
+
+        setJobNameRow1(arrayJsonFilter2[0].title)
+        setCompanyNameRow1(arrayJsonFilter2[0].company)
+        setLocationRow1(arrayJsonFilter2[0].location)
+        setTimeStatusRow1(arrayJsonFilter2[0].type)
+
+        setJobNameRow2(arrayJsonFilter2[1].title)
+        setCompanyNameRow2(arrayJsonFilter2[1].company)
+        setLocationRow2(arrayJsonFilter2[1].location)
+        setTimeStatusRow2(arrayJsonFilter2[1].type)
+
+        setJobNameRow3(arrayJsonFilter2[2].title)
+        setCompanyNameRow3(arrayJsonFilter2[2].company)
+        setLocationRow3(arrayJsonFilter2[2].location)
+        setTimeStatusRow3(arrayJsonFilter2[2].type)
+        
+        setJobNameRow4('')
+        setCompanyNameRow4('')
+        setLocationRow4('')
+        setTimeStatusRow4('')
+     
+        setJobNameRow5('')
+        setCompanyNameRow5('')
+        setLocationRow5('')
+        setTimeStatusRow5('')
+     
+        setJobNameRow6('')
+        setCompanyNameRow6('')
+        setLocationRow6('')
+        setTimeStatusRow6('')
+
+        convertPageFilter3LocationFilter()
+        
+    }
+
     const showFilterJob4 = () => {
 
+        setRecordData1(recordData1 == '9')
+        setRecordData2(recordData2 == '9')
         setRecordData3(recordData3 == '9')
         setRecordData4(recordData4 = '4')
 
+        setPos1Table(pos1Table = 'content')
+        setPos2Table(pos2Table = 'content')
         setPos3Table(pos3Table = 'content')
         setPos4Table(pos4Table == '4content')
 
+        setTable1Content(table1Content = 'content')
+        setTable2Content(table2Content = 'content')
         setTable3Content(table3Content = 'content')
         setTable4Content(table4Content == 'none')
 
@@ -2002,16 +2751,16 @@ function Dashboard (){
         
     }
 
-    const showFilterJob6a = () => {
+    const showFilterJob4LocationFilter = () => {
 
-       //setRecordData3(recordData3 == '9')
-        setRecordData5(recordData5 = '5')
+        setRecordData3(recordData3 == '9')
+        setRecordData4(recordData4 = '4')
 
-        //setPos3Table(pos3Table = 'content')
-        setPos5Table(pos5Table == '5content')
+        setPos3Table(pos3Table = 'content')
+        setPos4Table(pos4Table == '4content')
 
-        //setTable3Content(table3Content = 'content')
-        setTable5Content(table5Content == 'none')
+        setTable3Content(table3Content = 'content')
+        setTable4Content(table4Content == 'none')
 
         setPage1Status(page1Status = 'selected')
         
@@ -2021,37 +2770,37 @@ function Dashboard (){
 
         setPage4Status(page4Status = 'basic')
 
-        setJobNameRow1(arrayJsonFilter[0].title)
-        setCompanyNameRow1(arrayJsonFilter[0].company)
-        setLocationRow1(arrayJsonFilter[0].location)
-        setTimeStatusRow1(arrayJsonFilter[0].type)
+        setJobNameRow1(arrayJsonFilter2[0].title)
+        setCompanyNameRow1(arrayJsonFilter2[0].company)
+        setLocationRow1(arrayJsonFilter2[0].location)
+        setTimeStatusRow1(arrayJsonFilter2[0].type)
 
-        setJobNameRow2(arrayJsonFilter[1].title)
-        setCompanyNameRow2(arrayJsonFilter[1].company)
-        setLocationRow2(arrayJsonFilter[1].location)
-        setTimeStatusRow2(arrayJsonFilter[1].type)
+        setJobNameRow2(arrayJsonFilter2[1].title)
+        setCompanyNameRow2(arrayJsonFilter2[1].company)
+        setLocationRow2(arrayJsonFilter2[1].location)
+        setTimeStatusRow2(arrayJsonFilter2[1].type)
 
-        setJobNameRow3(arrayJsonFilter[2].title)
-        setCompanyNameRow3(arrayJsonFilter[2].company)
-        setLocationRow3(arrayJsonFilter[2].location)
-        setTimeStatusRow3(arrayJsonFilter[2].type)
+        setJobNameRow3(arrayJsonFilter2[2].title)
+        setCompanyNameRow3(arrayJsonFilter2[2].company)
+        setLocationRow3(arrayJsonFilter2[2].location)
+        setTimeStatusRow3(arrayJsonFilter2[2].type)
         
-        setJobNameRow4(arrayJsonFilter[3].title)
-        setCompanyNameRow4(arrayJsonFilter[3].company)
-        setLocationRow4(arrayJsonFilter[3].location)
-        setTimeStatusRow4(arrayJsonFilter[3].type)
+        setJobNameRow4(arrayJsonFilter2[3].title)
+        setCompanyNameRow4(arrayJsonFilter2[3].company)
+        setLocationRow4(arrayJsonFilter2[3].location)
+        setTimeStatusRow4(arrayJsonFilter2[3].type)
      
-        setJobNameRow5(arrayJsonFilter[4].title)
-        setCompanyNameRow5(arrayJsonFilter[4].company)
-        setLocationRow5(arrayJsonFilter[4].location)
-        setTimeStatusRow5(arrayJsonFilter[4].type)
+        setJobNameRow5('')
+        setCompanyNameRow5('')
+        setLocationRow5('')
+        setTimeStatusRow5('')
      
         setJobNameRow6('')
         setCompanyNameRow6('')
         setLocationRow6('')
         setTimeStatusRow6('')
 
-        convertPageFilter5()
+        convertPageFilter4LocationFilter()
         
     }
 
@@ -2075,7 +2824,7 @@ function Dashboard (){
          setTable4Content(table4Content = 'content')
          setTable5Content(table5Content == 'none')
  
-         setPage1Status(page1Status = 'selected')
+         setPage1Status(page1Status == 'selected')
          
          setPage2Status(page2Status = 'basic')
  
@@ -2128,6 +2877,14 @@ function Dashboard (){
     
     }
 
+    const convertPageFilter1LocationFilter = () => {
+        if(arrayJsonFilter2[0].created_at != null){
+            dateLocalFilter1 = new Date(`${arrayJsonFilter2[0].created_at}`)
+            setDateAndTimeConvertRow1(`${dateLocalFilter1}`)
+        }
+    
+    }
+
     const convertPageFilter1b = () => {
         if(arrayJsonFilter[5].created_at != null){
             dateLocalFilter5 = new Date(`${arrayJsonFilter[5].created_at}`)
@@ -2144,6 +2901,19 @@ function Dashboard (){
 
         if(arrayJsonFilter[1].created_at != null){
             dateLocalFilter2 = new Date(`${arrayJsonFilter[1].created_at}`)
+            setDateAndTimeConvertRow2(`${dateLocalFilter2}`)
+        }
+    
+    }
+
+    const convertPageFilter2LocationFilter = () => {
+        if(arrayJsonFilter2[0].created_at != null){
+            dateLocalFilter1 = new Date(`${arrayJsonFilter2[0].created_at}`)
+            setDateAndTimeConvertRow1(`${dateLocalFilter1}`)
+        }
+
+        if(arrayJsonFilter2[1].created_at != null){
+            dateLocalFilter2 = new Date(`${arrayJsonFilter2[1].created_at}`)
             setDateAndTimeConvertRow2(`${dateLocalFilter2}`)
         }
     
@@ -2167,6 +2937,24 @@ function Dashboard (){
     
     }
 
+    const convertPageFilter3LocationFilter = () => {
+        if(arrayJsonFilter2[0].created_at != null){
+            dateLocalFilter1 = new Date(`${arrayJsonFilter2[0].created_at}`)
+            setDateAndTimeConvertRow1(`${dateLocalFilter1}`)
+        }
+
+        if(arrayJsonFilter2[1].created_at != null){
+            dateLocalFilter2 = new Date(`${arrayJsonFilter2[1].created_at}`)
+            setDateAndTimeConvertRow2(`${dateLocalFilter2}`)
+        }
+
+        if(arrayJsonFilter2[2].created_at != null){
+            dateLocalFilter3 = new Date(`${arrayJsonFilter2[2].created_at}`)
+            setDateAndTimeConvertRow3(`${dateLocalFilter3}`)
+        }
+    
+    }
+
     const convertPageFilter4 = () => {
         if(arrayJsonFilter[0].created_at != null){
             dateLocalFilter1 = new Date(`${arrayJsonFilter[0].created_at}`)
@@ -2185,6 +2973,29 @@ function Dashboard (){
 
         if(arrayJsonFilter[3].created_at != null){
             dateLocalFilter4 = new Date(`${arrayJsonFilter[3].created_at}`)
+            setDateAndTimeConvertRow4(`${dateLocalFilter4}`)
+        }
+    
+    }
+
+    const convertPageFilter4LocationFilter = () => {
+        if(arrayJsonFilter2[0].created_at != null){
+            dateLocalFilter1 = new Date(`${arrayJsonFilter2[0].created_at}`)
+            setDateAndTimeConvertRow1(`${dateLocalFilter1}`)
+        }
+
+        if(arrayJsonFilter2[1].created_at != null){
+            dateLocalFilter2 = new Date(`${arrayJsonFilter2[1].created_at}`)
+            setDateAndTimeConvertRow2(`${dateLocalFilter2}`)
+        }
+
+        if(arrayJsonFilter2[2].created_at != null){
+            dateLocalFilter3 = new Date(`${arrayJsonFilter2[2].created_at}`)
+            setDateAndTimeConvertRow3(`${dateLocalFilter3}`)
+        }
+
+        if(arrayJsonFilter2[3].created_at != null){
+            dateLocalFilter4 = new Date(`${arrayJsonFilter2[3].created_at}`)
             setDateAndTimeConvertRow4(`${dateLocalFilter4}`)
         }
     
@@ -2409,8 +3220,11 @@ function Dashboard (){
         const buttonPage1 = document.querySelector('.pagecontainerindividualpage1-selected')
         const buttonPage1b = document.querySelector('.pagecontainerindividualpage1-basic')
         const buttonPage2 = document.querySelector('.pagecontainerindividualpage2-basic')
+        const buttonPage2b = document.querySelector('.pagecontainerindividualpage2-selected')
         const buttonPage3 = document.querySelector('.pagecontainerindividualpage3-basic')
+        const buttonPage3b = document.querySelector('.pagecontainerindividualpage3-selected')
         const buttonPage4 = document.querySelector('.pagecontainerindividualpage4-basic')
+        const buttonPage4b = document.querySelector('.pagecontainerindividualpage4-selected')
         const buttonPage5 = document.querySelector('.pagecontainerindividualonceprev-stuck')
         const buttonPage5b = document.querySelector('.pagecontainerindividualonceprev-basic')
         const buttonPage6 = document.querySelector('.pagecontainerindividualoncenext-basic')
@@ -2421,258 +3235,137 @@ function Dashboard (){
         const buttonPage8b = document.querySelector('.pagecontainerindividualdoubleprev-basic')
         const loadmorebutton = document.querySelector('.loadmorebutton1-content')
 
+        
+
+        if(buttonPage1 && buttonPage2 && buttonPage3 && buttonPage4 && buttonPage5 
+            && buttonPage6 && buttonPage7 && buttonPage8){
+              
     
-        if(buttonPage2.style.display == "none" && buttonPage3.style.display == 'none' && buttonPage4.style.display == 'none'){
-
-            console.log('masukkkkk 6a1')
-            buttonPage2.style.display = "flex"
-            buttonPage2.style.alignItems = "center"
-            buttonPage2.style.justifyContent = "center"
-            
-
-            if(buttonPage1.className == 'pagecontainerindividualpage1-selected'){
-
-                buttonPage1.style.width = "40px"
-                buttonPage1.style.height = "40px"
-                buttonPage1.style.fontWeight = "bolder"
-                buttonPage1.style.fontSize = "large"
-                
-
-                if(buttonPage5){
-                    buttonPage5.style.visibility = "visible"
-                    buttonPage8.style.visibility = "visible"
+                if(buttonPage6){
+    
+                    buttonPage3.style.display = 'none'
+                    buttonPage4.style.display = 'none'
+                    //loadmorebutton.className = 'loadmorebutton1-5content'
+    
                 }
-
-                if(buttonPage5b){
-                    buttonPage5b.style.visibility = "visible"
-                    buttonPage8b.style.visibility = "visible"
+    
+                if(buttonPage3.style.display == 'none'){
+                    // windows back button
+                    window.onpopstate = () => {
+                        navigate("/dashboard")
+                    }
+                }
+               
+            }
+    
+        if(buttonPage1b && buttonPage2b && buttonPage3 && buttonPage4 && buttonPage5b 
+            && buttonPage6 && buttonPage7 && buttonPage8b){
+                  
+               
+        
+                if(buttonPage6){
+        
+                    buttonPage3.style.display = 'none'
+                    buttonPage4.style.display = 'none'
+                    loadmorebutton.className = 'loadmorebutton1-5content'
                     buttonPage5b.className = 'pagecontainerindividualonceprev-stuck'
                     buttonPage8b.className = 'pagecontainerindividualdoubleprev-stuck'
-                }
-                
-                buttonPage6b.style.visibility = "visible"
-                buttonPage7b.style.visibility = "visible"
-
-                buttonPage6b.className = 'pagecontainerindividualoncenext-basic'
-                buttonPage7b.className = 'pagecontainerindividualdoublenext-basic'
-                
-            }
-
-           
-        }
-       
         
-        if(buttonPage1 && buttonPage2 && buttonPage3 && buttonPage3.style.display == "flex" && buttonPage4 && buttonPage5 
-        && buttonPage6 && buttonPage7 && buttonPage8){
-          
-            console.log('masukkkkk 6a2')
-
-            setPage1Status(page1Status == 'basic')
-            buttonPage6.className = 'pagecontainerindividualoncenext-stuck'
-            buttonPage7.className = 'pagecontainerindividualdoublenext-stuck'
-        
-
-            if(buttonPage6.className == 'pagecontainerindividualoncenext-stuck'){
-
-                buttonPage3.style.display = 'none'
-                buttonPage4.style.display = 'none'
-                buttonPage6.className = 'pagecontainerindividualoncenext-basic'
-                buttonPage7.className = 'pagecontainerindividualdoublenext-basic'
-                buttonPage7.style.cursor = "pointer"
-                loadmorebutton.style.opacity = "100%"
-                loadmorebutton.style.cursor = "pointer"
-                
-            }
-
-            if(buttonPage3.style.display == 'none'){
-                // windows back button
-                window.onpopstate = () => {
-                    navigate("/dashboard")
                 }
-            }
-           
+        
+                if(buttonPage3.style.display == 'none'){
+                        // windows back button
+                    window.onpopstate = () => {
+                        navigate("/dashboard")
+                    }
+                }
         }
 
+        if(buttonPage1b && buttonPage2 && buttonPage3b && buttonPage4 && buttonPage5b 
+            && buttonPage6 && buttonPage7 && buttonPage8b){
+                  
+                
         
+                if(buttonPage6){
+        
+                    buttonPage3b.style.display = 'none'
+                    buttonPage4.style.display = 'none'
+                    loadmorebutton.className = 'loadmorebutton1-5content'
+                    buttonPage5b.className = 'pagecontainerindividualonceprev-stuck'
+                    buttonPage8b.className = 'pagecontainerindividualdoubleprev-stuck'
+        
+                }
+        
+                if(buttonPage3b.style.display == 'none'){
+                        // windows back button
+                    window.onpopstate = () => {
+                        navigate("/dashboard")
+                    }
+                }
+        }
+
+        if(buttonPage1b && buttonPage2 && buttonPage3 && buttonPage4b && buttonPage5b 
+            && buttonPage6b && buttonPage7b && buttonPage8b){
+                  
+                
+        
+                if(buttonPage6b){
+        
+                    buttonPage3.style.display = 'none'
+                    buttonPage4b.style.display = 'none'
+                    loadmorebutton.className = 'loadmorebutton1-5content'
+                    buttonPage5b.className = 'pagecontainerindividualonceprev-stuck'
+                    buttonPage8b.className = 'pagecontainerindividualdoubleprev-stuck'
+                    buttonPage6b.className = 'pagecontainerindividualoncenext-basic'
+                    buttonPage7b.className = 'pagecontainerindividualdoublenext-basic'
+        
+                }
+        
+                if(buttonPage3.style.display == 'none'){
+                        // windows back button
+                    window.onpopstate = () => {
+                        navigate("/dashboard")
+                    }
+                }
+        }
+
+        if(buttonPage1 && buttonPage2.style.display == 'none' && buttonPage3.style.display == 'none' 
+        && buttonPage4.style.display == 'none' && buttonPage5.style.visibility == 'hidden' && buttonPage6b.style.visibility == 'hidden' 
+        && buttonPage7b.style.visibility == 'hidden' && buttonPage8.style.visibility == 'hidden'){
+                  
+                
+        
+                if(buttonPage6b){
+        
+                    buttonPage2.style.display = 'flex'
+                    loadmorebutton.style.visibility = 'visible'
+                    buttonPage6b.style.visibility = 'visible'
+                    buttonPage7b.style.visibility = 'visible'
+                    buttonPage6b.className = 'pagecontainerindividualoncenext-basic'
+                    buttonPage7b.className = 'pagecontainerindividualdoublenext-basic'
+                    buttonPage5.style.visibility = 'visible'
+                    buttonPage8.style.visibility = 'visible'
+        
+                }
+        
+                if(buttonPage3.style.display == 'none'){
+                        // windows back button
+                    window.onpopstate = () => {
+                        navigate("/dashboard")
+                    }
+                }
+        }
+   
     }
-
-    const buttonNextFilter6b = () => {
-        
-        
-        const buttonPage1 = document.querySelector('.pagecontainerindividualpage1-basic')
-        const buttonPage2 = document.querySelector('.pagecontainerindividualpage2-selected')
-        const buttonPage2b = document.querySelector('.pagecontainerindividualpage2-basic')
-        const buttonPage3 = document.querySelector('.pagecontainerindividualpage3-basic')
-        const buttonPage4 = document.querySelector('.pagecontainerindividualpage4-basic')
-        const buttonPage5 = document.querySelector('.pagecontainerindividualonceprev-basic')
-        const buttonPage6 = document.querySelector('.pagecontainerindividualoncenext-basic')
-        const buttonPage6b = document.querySelector('.pagecontainerindividualoncenext-stuck')
-        const buttonPage7 = document.querySelector('.pagecontainerindividualdoublenext-basic')
-        const buttonPage7b = document.querySelector('.pagecontainerindividualdoublenext-stuck')
-        const buttonPage8 = document.querySelector('.pagecontainerindividualdoubleprev-basic')
-        const loadmorebutton = document.querySelector('.loadmorebutton1-content')
-        
-        // with first search filter continue with 6 length of search filter
-        if(buttonPage2b.style.display == "none"){
-
-            
-            buttonPage2.style.display = "flex"
-            buttonPage2.style.alignItems = "center"
-            buttonPage2.style.justifyContent = "center"
-            
-
-            if(buttonPage1.className == 'pagecontainerindividualpage1-selected'){
-
-                console.log('masukkkkk')
-                buttonPage1.style.width = "40px"
-                buttonPage1.style.height = "40px"
-                buttonPage1.style.fontWeight = "bolder"
-                buttonPage1.style.fontSize = "large"
-                buttonPage5.style.visibility = "visible"
-                buttonPage8.style.visibility = "visible"
-                buttonPage6b.style.visibility = "visible"
-                buttonPage7b.style.visibility = "visible"
-
-                buttonPage5.className = 'pagecontainerindividualonceprev-stuck'
-                buttonPage8.className = 'pagecontainerindividualdoubleprev-stuck'
-                buttonPage6b.className = 'pagecontainerindividualoncenext-basic'
-                buttonPage7b.className = 'pagecontainerindividualdoublenext-basic'
-                
-            }
-
-           
-        }
-
-        if(buttonPage1 && buttonPage2 && buttonPage3 && buttonPage4 && buttonPage5 && buttonPage6 && buttonPage7 && buttonPage8){
-          
-            console.log('masukkkkk 6b2')
-            loadmorebutton.style.opacity = "100%"
-            loadmorebutton.style.cursor = "pointer"
-            buttonPage5.className = 'pagecontainerindividualonceprev-stuck'
-            buttonPage8.className = 'pagecontainerindividualdoubleprev-stuck'
-            buttonPage1.className = 'pagecontainerindividualpage1-selected'
-
-        
-
-            if(buttonPage5.className == 'pagecontainerindividualonceprev-stuck'){
-
-                buttonPage3.style.display = 'none'
-                buttonPage4.style.display = 'none'
-                buttonPage6.className = 'pagecontainerindividualoncenext-basic'
-                buttonPage7.className = 'pagecontainerindividualdoublenext-basic'
-                buttonPage7.style.cursor = "pointer"
-                loadmorebutton.style.opacity = "100%"
-                loadmorebutton.style.cursor = "pointer"
-                
-            }
-
-            if(buttonPage3.style.display == 'none'){
-                // windows back button
-                window.onpopstate = () => {
-                    navigate("/dashboard")
-                }
-            }
-           
-        }
-
-        
-    }
-
-    const buttonNextFilter6c = () => {
-        
-    
-        const buttonPage1 = document.querySelector('.pagecontainerindividualpage1-basic')
-        const buttonPage2 = document.querySelector('.pagecontainerindividualpage2-basic')
-        const buttonPage3 = document.querySelector('.pagecontainerindividualpage3-selected')
-        const buttonPage4 = document.querySelector('.pagecontainerindividualpage4-basic')
-        const buttonPage5 = document.querySelector('.pagecontainerindividualonceprev-basic')
-        const buttonPage6 = document.querySelector('.pagecontainerindividualoncenext-basic')
-        const buttonPage7 = document.querySelector('.pagecontainerindividualdoublenext-basic')
-        const buttonPage8 = document.querySelector('.pagecontainerindividualdoubleprev-basic')
-        const loadmorebutton = document.querySelector('.loadmorebutton1-content')
-        
-
-        if(buttonPage1 && buttonPage2 && buttonPage3 && buttonPage4  && buttonPage6 && buttonPage7 ){
-          
-            console.log('masukkkkk 6c1')
-            if(buttonPage6.className == 'pagecontainerindividualoncenext-basic'){
-
-                buttonPage1.className = 'pagecontainerindividualpage1-selected'
-                buttonPage3.className = 'pagecontainerindividualpage2-basic'
-                buttonPage5.className = 'pagecontainerindividualonceprev-stuck'
-                buttonPage8.className = 'pagecontainerindividualdoubleprev-stuck'
-                buttonPage3.style.display = 'none'
-                buttonPage4.style.display = 'none'
-                buttonPage7.style.cursor = "pointer"
-                loadmorebutton.style.opacity = "100%"
-                loadmorebutton.style.cursor = "pointer"
-                
-            }
-
-            if(buttonPage3.style.display == 'none'){
-                // windows back button
-                window.onpopstate = () => {
-                    navigate("/dashboard")
-                }
-            }
-           
-        }
-
-    }
-
-    const buttonNextFilter6d = () => {
-        
-    
-        const buttonPage1 = document.querySelector('.pagecontainerindividualpage1-basic')
-        const buttonPage2 = document.querySelector('.pagecontainerindividualpage2-basic')
-        const buttonPage3 = document.querySelector('.pagecontainerindividualpage3-basic')
-        const buttonPage4 = document.querySelector('.pagecontainerindividualpage4-selected')
-        const buttonPage5 = document.querySelector('.pagecontainerindividualonceprev-basic')
-        const buttonPage6 = document.querySelector('.pagecontainerindividualoncenext-stuck')
-        const buttonPage7 = document.querySelector('.pagecontainerindividualdoublenext-stuck')
-        const buttonPage8 = document.querySelector('.pagecontainerindividualdoubleprev-basic')
-        const loadmorebutton = document.querySelector('.loadmorebutton1-content')
-        
-
-        if(buttonPage1 && buttonPage2 && buttonPage3 && buttonPage4 && buttonPage5 && buttonPage8){
-      
-            console.log('masukkkkk 6d1')
-            if(buttonPage6.className == 'pagecontainerindividualoncenext-stuck'){
-
-
-                buttonPage3.style.display = 'none'
-                buttonPage4.style.display = 'none'
-                buttonPage1.className = 'pagecontainerindividualpage1-selected'
-                buttonPage6.className = 'pagecontainerindividualoncenext-basic'
-                buttonPage7.className = 'pagecontainerindividualdoublenext-basic'
-                buttonPage5.className = 'pagecontainerindividualonceprev-stuck'
-                buttonPage8.className = 'pagecontainerindividualdoubleprev-stuck'
-                buttonPage7.style.cursor = "pointer"
-                loadmorebutton.style.opacity = "100%"
-                loadmorebutton.style.cursor = "pointer"
-                
-            }
-
-            if(buttonPage3.style.display == 'none'){
-                // windows back button
-                window.onpopstate = () => {
-                    navigate("/dashboard")
-                }
-            }
-           
-        }
-
-    }
-
 
 
     const logOut = () => {
         Axios.delete("http://localhost:3001/logout", {
                 }).then((response) => {
                   if(response.data.message){
-                      console.log(response)
+                      (response)
                   } else {
-                      console.log(response)
+                      (response)
                       
                       navigate("/", {
                         state: 
@@ -2689,13 +3382,14 @@ function Dashboard (){
 
     const row1EventListener = () => {
 
+
         if(jobNameRow1 != null && jobNameRow1 == arrayJson[0].title) {
             
             let seeCompany1 = arrayJson.filter((param) => {
                 return  param.company.includes(arrayJson[0].company)
             })
 
-            console.log(seeCompany1)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2710,11 +3404,12 @@ function Dashboard (){
 
         if(jobNameRow1 != null && jobNameRow1 == arrayJson[5].title) {
             
+
             let seeCompany1 = arrayJson.filter((param) => {
                 return  param.company.includes(arrayJson[5].company)
             })
 
-            console.log(seeCompany1)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2729,11 +3424,12 @@ function Dashboard (){
 
         if(jobNameRow1 != null && jobNameRow1 == arrayJson[10].title) {
             
+
             let seeCompany1 = arrayJson.filter((param) => {
                 return  param.company.includes(arrayJson[10].company)
             })
 
-            console.log(seeCompany1)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2752,7 +3448,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[15].company)
             })
 
-            console.log(seeCompany1)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2763,7 +3459,238 @@ function Dashboard (){
                     row4: 15,
                     },
             })
+
         }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[1].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[1].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[1],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 1,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[14].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[14].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[14],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 14,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[11].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[11].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[11],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 11,
+                    },
+            })
+        }
+
+        
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[7].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[7].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[7],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 7,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[12].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[12].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[12],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 12,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[8].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[8].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[8],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 8,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[3].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[3].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[3],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 3,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[4].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[4].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[4],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 4,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[6].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[6].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[6],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 6,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[9].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[9].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[9],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 9,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[17].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[17].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[17],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 17,
+                    },
+            })
+        }
+
+        if(jobNameRow1 != null && jobNameRow1 == arrayJson[2].title) {
+            
+            let seeCompany1 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[2].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[2],
+                    row2: name,
+                    row3: seeCompany1.length - 1,
+                    row4: 2,
+                    },
+            })
+        }
+
     }
 
     const row2EventListener = () => {
@@ -2774,7 +3701,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[1].company)
             })
 
-            console.log(seeCompany2)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2793,7 +3720,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[6].company)
             })
 
-            console.log(seeCompany2)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2812,7 +3739,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[11].company)
             })
 
-            console.log(seeCompany2)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2831,7 +3758,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[16].company)
             })
 
-            console.log(seeCompany2)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2840,6 +3767,158 @@ function Dashboard (){
                     row2: name,
                     row3: seeCompany2.length - 1,
                     row4: 16,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[2].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[2].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[2],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 2,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[3].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[3].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[3],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 3,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[7].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[7].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[7],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 7,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[4].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[4].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[4],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 4,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[10].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[10].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[10],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 10,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[9].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[9].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[9],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 9,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[15].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[15].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[15],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 15,
+                    },
+            })
+        }
+
+        if(jobNameRow2 != null && jobNameRow2 == arrayJson[13].title) {
+
+            let seeCompany2 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[13].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                    row1: arrayJson[13],
+                    row2: name,
+                    row3: seeCompany2.length - 1,
+                    row4: 13,
                     },
             })
         }
@@ -2853,7 +3932,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[2].company)
             })
 
-            console.log(seeCompany3)
+          
 
 
             navigate("/dashboard/detail", {
@@ -2873,7 +3952,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[7].company)
             })
 
-            console.log(seeCompany3)
+          
 
 
             navigate("/dashboard/detail", {
@@ -2893,7 +3972,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[12].company)
             })
 
-            console.log(seeCompany3)
+          
 
 
             navigate("/dashboard/detail", {
@@ -2913,7 +3992,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[17].company)
             })
 
-            console.log(seeCompany3)
+          
 
 
             navigate("/dashboard/detail", {
@@ -2926,6 +4005,128 @@ function Dashboard (){
                     },
             })
         }
+
+        if(jobNameRow3 != null && jobNameRow3 == arrayJson[5].title) {
+
+            let seeCompany3 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[5].company)
+            })
+
+          
+
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[5],
+                        row2: name,
+                        row3: seeCompany3.length - 1,
+                        row4: 5,
+                    },
+            })
+        }
+
+        if(jobNameRow3 != null && jobNameRow3 == arrayJson[8].title) {
+
+            let seeCompany3 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[8].company)
+            })
+
+          
+
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[8],
+                        row2: name,
+                        row3: seeCompany3.length - 1,
+                        row4: 8,
+                    },
+            })
+        }
+
+        if(jobNameRow3 != null && jobNameRow3 == arrayJson[3].title) {
+
+            let seeCompany3 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[3].company)
+            })
+
+          
+
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[3],
+                        row2: name,
+                        row3: seeCompany3.length - 1,
+                        row4: 3,
+                    },
+            })
+        }
+
+        if(jobNameRow3 != null && jobNameRow3 == arrayJson[13].title) {
+
+            let seeCompany3 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[13].company)
+            })
+
+          
+
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[13],
+                        row2: name,
+                        row3: seeCompany3.length - 1,
+                        row4: 13,
+                    },
+            })
+        }
+
+        if(jobNameRow3 != null && jobNameRow3 == arrayJson[10].title) {
+
+            let seeCompany3 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[10].company)
+            })
+
+          
+
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[10],
+                        row2: name,
+                        row3: seeCompany3.length - 1,
+                        row4: 10,
+                    },
+            })
+        }
+
+        if(jobNameRow3 != null && jobNameRow3 == arrayJson[9].title) {
+
+            let seeCompany3 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[9].company)
+            })
+
+          
+
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[9],
+                        row2: name,
+                        row3: seeCompany3.length - 1,
+                        row4: 9,
+                    },
+            })
+        }
+
+       
     }
 
     const row4EventListener = () => {
@@ -2936,7 +4137,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[3].company)
             })
 
-            console.log(seeCompany4)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2955,7 +4156,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[8].company)
             })
 
-            console.log(seeCompany4)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2974,7 +4175,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[13].company)
             })
 
-            console.log(seeCompany4)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -2983,6 +4184,82 @@ function Dashboard (){
                         row2: name,
                         row3: seeCompany4.length - 1,
                         row4: 13,
+                    },
+            })
+        }
+
+        if(jobNameRow4 != null && jobNameRow4 == arrayJson[17].title) {
+
+            let seeCompany4 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[17].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[17],
+                        row2: name,
+                        row3: seeCompany4.length - 1,
+                        row4: 17,
+                    },
+            })
+        }
+
+        if(jobNameRow4 != null && jobNameRow4 == arrayJson[10].title) {
+
+            let seeCompany4 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[10].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[10],
+                        row2: name,
+                        row3: seeCompany4.length - 1,
+                        row4: 10,
+                    },
+            })
+        }
+
+        if(jobNameRow4 != null && jobNameRow4 == arrayJson[9].title) {
+
+            let seeCompany4 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[9].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[9],
+                        row2: name,
+                        row3: seeCompany4.length - 1,
+                        row4: 9,
+                    },
+            })
+        }
+
+        if(jobNameRow4 != null && jobNameRow4 == arrayJson[14].title) {
+
+            let seeCompany4 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[14].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[14],
+                        row2: name,
+                        row3: seeCompany4.length - 1,
+                        row4: 14,
                     },
             })
         }
@@ -2996,7 +4273,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[4].company)
             })
 
-            console.log(seeCompany5)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -3015,7 +4292,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[9].company)
             })
 
-            console.log(seeCompany5)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -3034,7 +4311,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[14].company)
             })
 
-            console.log(seeCompany5)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -3043,6 +4320,44 @@ function Dashboard (){
                         row2: name,
                         row3: seeCompany5.length - 1,
                         row4: 14,
+                    },
+            })
+        }
+
+        if(jobNameRow5 != null && jobNameRow5 == arrayJson[13].title) {
+
+            let seeCompany5 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[13].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[13],
+                        row2: name,
+                        row3: seeCompany5.length - 1,
+                        row4: 13,
+                    },
+            })
+        }
+
+        if(jobNameRow5 != null && jobNameRow5 == arrayJson[12].title) {
+
+            let seeCompany5 = arrayJson.filter((param) => {
+                return  param.company.includes(arrayJson[12].company)
+            })
+
+          
+
+            navigate("/dashboard/detail", {
+                state: 
+                    {
+                        row1: arrayJson[12],
+                        row2: name,
+                        row3: seeCompany5.length - 1,
+                        row4: 12,
                     },
             })
         }
@@ -3056,7 +4371,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[7].company)
             })
 
-            console.log(seeCompany6)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -3075,7 +4390,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[12].company)
             })
 
-            console.log(seeCompany6)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -3094,7 +4409,7 @@ function Dashboard (){
                 return  param.company.includes(arrayJson[17].company)
             })
 
-            console.log(seeCompany6)
+          
 
             navigate("/dashboard/detail", {
                 state: 
@@ -3109,7 +4424,19 @@ function Dashboard (){
     }
 
     const toggleModal = () => {
+
         setModal(!modal)
+
+        if(modal == true){
+
+            setTimeout ( () => {
+
+                window.location.reload()
+                           
+            }, 500)
+        }
+
+       
     }
 
     
@@ -3141,6 +4468,7 @@ function Dashboard (){
 
                 <AnimatePresence>
                     {modal && (<motion.div className='containerpopup'
+                    drag
                     initial = {{
                         opacity: 0,
                         left: 20,
@@ -3159,7 +4487,7 @@ function Dashboard (){
                     }}>
                         <motion.h1 className='titlecontainerpopup'>ATTENTION</motion.h1>
                         <motion.div className='containerpopuptitleline'></motion.div>
-                        <motion.p className='suggestioncontainerpopup'>Please use specific word for searching !</motion.p>
+                        <motion.p className='suggestioncontainerpopup'>{warningAttention}</motion.p>
                         <motion.button className='okcontainerpopupbutton' onClick={toggleModal}>OK</motion.button>
                     </motion.div>)}
                 </AnimatePresence>

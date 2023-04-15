@@ -1717,14 +1717,14 @@
     color: #fff;
     border-radius: 4px;
     outline: none;
-    cursor: not-allowed;
+    cursor: pointer;
     border: 2px solid darkred;
-    opacity: 50%;
+    opacity: 100%;
 }
 
 .loadmorebutton1-5content:hover{
-    border-color: darkred;
-    color: #fff;
+    border-color: #ccc;
+    color: #ccc;
 }
 
 .pagecontainer-content{
@@ -2252,6 +2252,8 @@
     top: 56px;
     left: 20px;
     color: #2c2c54;
+    text-align: justify;
+    width: 360px;
     font-size: 16px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     z-index: 99999999999;

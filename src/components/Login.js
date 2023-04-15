@@ -20,7 +20,7 @@ function Login() {
   useEffect(() => {
 
     if(location.state){
-      console.log(location.state)
+      //console.log(location.state)
       setTimeout ( () => {
   
        setHistory(location.state.message)
@@ -101,7 +101,7 @@ function Login() {
 
                 setLoginStatus(loginStatus == 'off')
                 
-                console.log(loginStatus)
+                //console.log(loginStatus)
               }, 100)
           
           } 
@@ -115,7 +115,7 @@ function Login() {
 
                 setLoginStatus(loginStatus == 'off')
                 
-                console.log(loginStatus)
+                //console.log(loginStatus)
               }, 100)
           }
 
@@ -128,7 +128,7 @@ function Login() {
 
                 setLoginStatus(loginStatus == 'off')
                 
-                console.log(loginStatus)
+                //console.log(loginStatus)
               }, 100)
           }
 
@@ -153,12 +153,12 @@ function Login() {
                 password: passwordLog,
                 }).then((response) => {
                   if(response.data.message){
-                      console.log(response)
+                      //console.log(response)
                       setLoginNotification(response.data.message)
                       setLoginNotification2('') 
                       setLoginStatus(loginStatus == 'off')
                   } else {
-                      console.log(response)
+                      //console.log(response)
                       localStorage.setItem('token', response.data.token)
                       setLoginNotification('Login Successfully')  
                       setLoginNotification2('')  

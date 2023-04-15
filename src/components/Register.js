@@ -176,7 +176,7 @@ function Register() {
           password: passwordReg,
           confirm_password: confPasswordReg
         }).then((response) => {
-          console.log(response);
+          //console.log(response);
           if(response.data.message){
             setLoginNotification(response.data.message);
           }

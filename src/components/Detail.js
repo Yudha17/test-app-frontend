@@ -282,7 +282,7 @@ const extractJsonstring = () => {
                 setCompanyNameDetail(flagCompanyName)
             }
             
-            console.log(findTag)
+            //console.log(findTag)
 
             //it will take a few seconds 
             // if want to load more quick, try to use slice directly with row4 state differentiation
@@ -687,7 +687,7 @@ const createElementManual= () => {
    
 
 
-    console.log(location.state)
+    //console.log(location.state)
     
     if(location.state.row4 == 0) {  
 
@@ -3375,8 +3375,7 @@ const createElementManual= () => {
 
             if(linkdescription2.style.top == "1372px"){
 
-                console.log('masuk')
-    
+               
                 secondcontainer.style.height = "1432px"
                 detailcontainer.style.height = "1565px"
                 maindashboard.style.height = "1670px"
@@ -4314,8 +4313,6 @@ const createElementManual= () => {
 
             
             if(linkdescription2.style.top == "1386px"){
-
-                console.log('masuk')
     
                 secondcontainer.style.height = "1445px"
                 detailcontainer.style.height = "1577px"
@@ -4908,7 +4905,6 @@ const createElementManual= () => {
 
             if(description9.style.top == "1008px"){
 
-                console.log('masuk')
     
                 secondcontainer.style.height = "1080px"
                 detailcontainer.style.height = "1213px"
@@ -5540,8 +5536,7 @@ const createElementManual= () => {
 
             if(list18.style.top == "1119px"){
 
-                console.log('masuk')
-    
+                  
                 secondcontainer.style.height = "1191px"
                 detailcontainer.style.height = "1324px"
                 maindashboard.style.height = "1427px"
@@ -11419,7 +11414,6 @@ const createElementManual= () => {
             applydescription1.addEventListener("click", openNewTab)
             applydescription2.addEventListener("click", openNewTab)
             
-            console.log(textApplyDescription[1].slice(43, 86))
    
             function openNewTab() {
                 window.open(textApplyDescription[1].slice(43, 86))
@@ -11974,7 +11968,7 @@ const createElementManual= () => {
             applydescription1.style.color = "floralwhite"
             
 
-            console.log(textApplyDescription[1].slice(9, 60))
+            
             applydescription2 = document.createElement("p")
             applydescription2.innerHTML = textApplyDescription[1].slice(9, 56)
             applycontainer.appendChild(applydescription2)
